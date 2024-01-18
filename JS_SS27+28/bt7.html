@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getSubstrings(string) {
+        let substrings = [];
+        const length = string.length;
+        for (let i = 0; i < length; i++) {
+          for (let j = i; j < length; j++) {
+            const substr = string.substring(i, j + 1);
+            substrings.push(substr);
+          }
+        }
+        return substrings;
+      }
+
+      const userInput = prompt("Nhập vào một chuỗi:");
+      const result = getSubstrings(userInput);
+      console.log(result);
+    </script>
+  </body>
+</html>
